@@ -1,13 +1,13 @@
-package com.wittamit.timetracker.ui.slideshow
+package com.wittamit.timetracker.ui.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class DashboardViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "This is the Dashboard Fragment"
     }
     val text: LiveData<String> = _text
 }

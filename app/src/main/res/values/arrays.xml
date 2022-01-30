@@ -1,0 +1,22 @@
+<resources>
+    <string-array name="setting_app_theme">
+        <item>Device Default</item>
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
+    <string-array name="setting_app_theme_value">
+        <item>default</item>
+        <item>dark</item>
+        <item>light</item>
+    </string-array>
+    <string-array name="setting_sync_dest">
+        <item>Global Server</item>
+        <item>Custom Server</item>
+        <item>Google Drive</item>
+    </string-array>
+    <string-array name="setting_sync_dest_value">
+        <item>global</item>
+        <item>custom</item>
+        <item>gdrive</item>
+    </string-array>
+</resources>

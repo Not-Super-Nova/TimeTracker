@@ -1,0 +1,78 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:id="@+id/prefcat_defaults"
+        android:title="@string/settings_defaults">
+
+        <EditTextPreference
+            android:defaultValue="25"
+            android:key="default_rate"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/setting_default_rate"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            android:defaultValue="30"
+            android:key="default_break_length"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/setting_default_break"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            android:defaultValue="None"
+            android:key="default_customer"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/setting_default_customer"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:id="@+id/prefcat_sync"
+        android:title="@string/settings_sync">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="enable_sync"
+            android:title="@string/setting_sync_enable" />
+        <ListPreference
+            android:defaultValue="1"
+            android:dependency="enable_sync"
+            android:entries="@array/setting_sync_dest"
+            android:entryValues="@array/setting_sync_dest_value"
+            android:key="sync_to"
+            android:title="@string/setting_sync_to"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            android:defaultValue="127.0.0.1"
+            android:dependency="enable_sync"
+            android:key="sync_ip"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/setting_sync_ip"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            android:defaultValue="8080"
+            android:dependency="enable_sync"
+            android:key="sync_port"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/setting_sync_port"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:id="@+id/prefcat_misc"
+        android:title="@string/settings_misc">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/setting_app_theme"
+            android:entryValues="@array/setting_app_theme_value"
+            android:key="app_theme"
+            android:title="@string/setting_misc_app_theme"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="show_ads"
+            android:title="@string/setting_misc_show_ads" />
+    </PreferenceCategory>
+</PreferenceScreen>
